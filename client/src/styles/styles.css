@@ -68,3 +68,33 @@ input:focus,textarea:focus{outline:none;border-color:var(--indigo);box-shadow:0 
 
 @media (max-width:600px){.hero{padding:1.8rem 1.4rem}.bracket{display:none}}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+
+/* Fix text fields */
+.field input,
+.field textarea,
+input,
+textarea {
+    color: #222 !important;
+    background-color: #fff !important;
+    caret-color: #222;
+    opacity: 1;
+}
+
+/* Placeholder text */
+.field input::placeholder,
+.field textarea::placeholder,
+input::placeholder,
+textarea::placeholder {
+    color: #888;
+    opacity: 1;
+}
+
+/* Text when clicking inside a field */
+.field input:focus,
+.field textarea:focus,
+input:focus,
+textarea:focus {
+    color: #222 !important;
+    background-color: #fff !important;
+    outline: none;
+}

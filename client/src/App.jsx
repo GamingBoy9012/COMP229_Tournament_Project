@@ -1,10 +1,10 @@
 import React from "react";
 import { BrowserRouter, Routes, Route, NavLink, Navigate } from "react-router-dom";
-import { AuthProvider, useAuth } from "./AuthContext";
-import Auth from "./Auth";
-import { TournamentList, TournamentDetail, TournamentForm } from "./Tournaments";
-import Registrations from "./Registrations";
-import "./styles.css";
+import { AuthProvider, useAuth } from "./context/AuthContext";
+import Auth from "./components/Auth";
+import { TournamentList, TournamentDetail, TournamentForm } from "./pages/Tournaments";
+import Registrations from "./pages/Registrations";
+
 
 function Nav() {
   const { user, logout } = useAuth();
@@ -26,7 +26,7 @@ const Private = ({ children }) => (useAuth().user ? children : <Navigate to="/lo
 export default function App() {
   return (
     <AuthProvider>
-      <BrowserRouter basename="/frontend.html">
+    <BrowserRouter>
         <Nav />
         <main>
           <Routes>

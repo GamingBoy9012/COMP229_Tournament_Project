@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { api, EP } from "./api";
+import { api, EP } from "../api.js";
 
 export default function Registrations() {
   const [items, setItems] = useState(null);

@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
-import { api, EP } from "./api";
-import { useAuth } from "./AuthContext";
-import Field, { useForm } from "./Field";
+import { api, EP } from "../api.js";
+import { useAuth } from "../context/AuthContext";
+import Field, { useForm } from "../components/Field";
 
 const id = (t) => t._id || t.id;
 
