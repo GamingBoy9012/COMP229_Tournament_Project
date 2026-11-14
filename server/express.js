@@ -5,6 +5,7 @@ import compress from "compression";
 import cors from "cors";
 import helmet from "helmet";
 import tournamentRouter from "./routes/tournament-router.js";
+import registrationRouter from "./routes/registration-routes.js";
 
 const app = express();
 
@@ -17,5 +18,6 @@ app.use(cors());
 
 // Tournament API
 app.use("/api/tournaments", tournamentRouter);
+app.use("/api/registrations", registrationRouter);
 
 export default app;

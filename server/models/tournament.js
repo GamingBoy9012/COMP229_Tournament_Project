@@ -17,6 +17,10 @@ const tournamentSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    maxPlayers: {
+        type: Number,
+        required: true
+    },
     description: {
         type: String,
         required: true
