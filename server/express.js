@@ -5,7 +5,7 @@ import compress from "compression";
 import cors from "cors";
 import helmet from "helmet";
 import tournamentRouter from "./routes/tournament-router.js";
-import registrationRouter from "./routes/registration.routes.js";
+import registrationRouter from "./routes/registration-routes.js";
 import userRoutes from "./routes/user.routes.js";
 
 const app = express();
