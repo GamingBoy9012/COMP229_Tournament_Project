@@ -9,8 +9,8 @@
     "@babel/core": "^7.27.1",
     "@babel/preset-env": "^7.27.2",
     "babel-loader": "^10.0.0",
-    "concurrently": "^9.1.2",
-    "nodemon": "^3.1.10"
+    "concurrently": "^10.0.7",
+    "nodemon": "^3.1.11"
   },
   "scripts": {
     "dev": "concurrently 'vite' \"nodemon server.js\"",
@@ -24,7 +24,14 @@
     "cookie-parser": "^1.4.7",
     "cors": "^2.8.5",
     "express": "^5.1.0",
+    "express-jwt": "^8.5.1",
     "global": "^4.4.0",
-    "helmet": "^8.1.0"
-  }
+    "helmet": "^8.1.0",
+    "install": "^0.13.0",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^9.12.1",
+    "nodeman": "^1.1.2",
+    "yarn": "^1.22.22"
+  },
+  "repository": "https://github.com/GamingBoy9012/COMP229_Tournament_Project.git"
 }

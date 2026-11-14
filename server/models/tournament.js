@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 
 const tournamentSchema = new mongoose.Schema({
     name: {
@@ -29,4 +29,4 @@ const tournamentSchema = new mongoose.Schema({
 
 const Tournament = mongoose.model("Tournament", tournamentSchema);
 
-module.exports = Tournament;
+export default Tournament;
