@@ -86,6 +86,36 @@ export const getRegistrationById = async (req, res) => {
   }
 };
 
+// Update a registration
+export const updateRegistration = async (req, res) => {
+  try {
+    const registration = await Registration.findByIdAndUpdate(
+      req.params.id,
+      req.body,
+      { new: true, runValidators: true }
+    );
+
+    if (!registration) {
+      return res.status(404).json({
+        message: "Registration not found"
+      });
+    }
+
+    res.json(registration);
+  } catch (error) {
+    if (error.code === 11000) {
+      return res.status(409).json({
+        message: "User is already registered"
+      });
+    }
+
+    res.status(400).json({
+      message: "Error updating registration",
+      error: error.message
+    });
+  }
+};
+
 // Cancel a registration
 export const deleteRegistration = async (req, res) => {
   try {
