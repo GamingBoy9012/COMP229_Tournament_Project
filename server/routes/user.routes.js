@@ -4,13 +4,12 @@ import authCtrl from '../controllers/auth.controller.js'
 
 const router = express.Router()
 
-// ADD THIS LINE to handle POST requests for user creation (Sign Up)
-router.route('/api/users')
+router.route('/')
   .post(userCtrl.create)
   .get(userCtrl.list) // List all users (GET request)
   .delete(authCtrl.requireSignin, userCtrl.removeAll)
 
-router.route('/api/users/:userId')
+router.route('/:userId')
   .get(userCtrl.read)
   .put(authCtrl.requireSignin, authCtrl.hasAuthorization, userCtrl.update)
   .delete(authCtrl.requireSignin, authCtrl.hasAuthorization, userCtrl.remove)

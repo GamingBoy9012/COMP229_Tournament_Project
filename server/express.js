@@ -7,6 +7,7 @@ import helmet from "helmet";
 import tournamentRouter from "./routes/tournament-router.js";
 import registrationRouter from "./routes/registration-routes.js";
 import userRoutes from "./routes/user.routes.js";
+import authRoutes from "./routes/auth.routes.js";
 
 const app = express();
 
@@ -21,4 +22,5 @@ app.use(cors());
 app.use("/api/tournaments", tournamentRouter);
 app.use("/api/registrations", registrationRouter);
 app.use("/api/users", userRoutes);
+app.use("/api", authRoutes);
 export default app;
